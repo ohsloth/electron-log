@@ -4,7 +4,13 @@ var fs   = require('fs');
 var path = require('path');
 var util = require('util');
 var EOL  = require('os').EOL;
+var colors = require('colors'):
 
+var COLORS = {
+  error: colors.red,
+  warn: colors.yellow,
+  info: colors.blue,
+};
 
 var LEVELS = [ 'error', 'warn', 'info', 'verbose', 'debug', 'silly' ];
 
@@ -321,7 +327,9 @@ function formatConsole(msg) {
     pad(msg.date.getSeconds()) + ':' +
     pad(msg.date.getMilliseconds(), 4);
 
-  return '[' + time + '] [' + msg.level + '] ' + msg.text;
+  var color = COLORS[msg.level] || colors.gray;
+
+  return '[' + time + '] [' + color(msg.level) + '] ' + color(msg.text);
 }
 
 function formatFile(msg) {

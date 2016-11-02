@@ -42,5 +42,8 @@
     "jshint-reporter-jscs": "*",
     "mocha": "*",
     "rewire": "*"
+  },
+  "dependencies": {
+    "colors": "^1.1.2"
   }
 }
