@@ -10,6 +10,7 @@ var COLORS = {
   error: colors.red,
   warn: colors.yellow,
   info: colors.blue,
+  debug: colors.green,
 };
 
 var LEVELS = [ 'error', 'warn', 'info', 'verbose', 'debug', 'silly' ];
