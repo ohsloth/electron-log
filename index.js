@@ -4,7 +4,7 @@ var fs   = require('fs');
 var path = require('path');
 var util = require('util');
 var EOL  = require('os').EOL;
-var colors = require('colors'):
+var colors = require('colors');
 
 var COLORS = {
   error: colors.red,
